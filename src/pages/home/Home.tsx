@@ -48,7 +48,7 @@ const Jumbotron: React.FC = () => {
         const interval = setInterval(() => {
 
             setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % rotatingPhrases.length);
-        }, 2500);
+        }, 2000);
 
         return () => clearInterval(interval);
     }, []);
@@ -91,7 +91,7 @@ const Jumbotron: React.FC = () => {
                                          initial={{position: 'relative', opacity: 0, scale: 0.8}}
                                          animate={{position: 'relative', opacity: 1, scale: 1}}
                                          exit={{position: 'absolute', opacity: 0, scale: 0.8}}
-                                         transition={{duration: 0.5}}
+                                         transition={{duration: 0.25}}
                                          style={{
                                              position: "absolute"
                                          }}
