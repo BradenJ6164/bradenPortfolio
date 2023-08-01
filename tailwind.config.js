@@ -7,16 +7,18 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
+    'node_modules/preline/dist/*.js',
+    './node_modules/tw-elements/dist/js/**/*.js'
 	],
   theme: {
+
     container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+
     },
     extend: {
+      colors: {
+        primary: '#ef4444'
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -36,5 +38,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),require('preline/plugin'),require("tw-elements/dist/plugin.cjs")],
 }

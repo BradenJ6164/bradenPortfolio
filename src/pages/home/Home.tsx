@@ -1,7 +1,9 @@
-import {AnimatePresence, motion, useScroll, useTransform, useViewportScroll, Variants} from "framer-motion";
+import {AnimatePresence, motion, Variants} from "framer-motion";
 import React, {useEffect, useState} from "react";
-import {Feature1} from "./features";
+import Feature1 from "./features/Feature1";
 import Feature2 from "./features/Feature2";
+import Feature3 from "./features/Feature3";
+import Feature4 from "./features/Feature4";
 
 const rotatingPhrases = [
     'websites!',
@@ -16,10 +18,9 @@ export const listItemVariants: Variants = {
     },
     onscreen: {
         y: 0,
-        rotate: 0,
         transition: {
             type: "spring",
-            bounce: 0.4,
+            bounce: 0.2,
             duration: 0.8
         }
     }
@@ -35,8 +36,8 @@ export const featureItemVariants: Variants = {
         x: 0,
         transition: {
             type: "spring",
-            bounce: 0.4,
-            duration: 2
+            bounce: 0.2,
+            duration: 1
         }
     }
 };
@@ -48,7 +49,7 @@ const Jumbotron: React.FC = () => {
         const interval = setInterval(() => {
 
             setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % rotatingPhrases.length);
-        }, 2000);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, []);
@@ -133,30 +134,24 @@ const HomeScreen: React.FC = () => {
         <div className="overflow-hidden">
             <Jumbotron/>
 
-            <motion.div
 
-                initial="offscreenRight"
-                whileInView="onscreen"
-                viewport={{amount: 0.25}}
-            >
-
-                <motion.div variants={featureItemVariants}>
                     <Feature1/>
-                </motion.div>
-            </motion.div>
 
 
             <motion.div
 
                 initial="offscreenLeft"
                 whileInView="onscreen"
-                viewport={{amount: 0.25}}
+                viewport={{once: true, amount: 0.25}}
             >
 
                 <motion.div variants={featureItemVariants}>
                     <Feature2/>
                 </motion.div>
             </motion.div>
+            <Feature3/>
+
+            <Feature4/>
 
 
         </div>
