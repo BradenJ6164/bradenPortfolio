@@ -5,7 +5,7 @@ import {listItemVariants} from "../Home";
 const Feature3: React.FC = () => {
 
     return (
-        <section className="w-full dark bg-gray-900  dark:bg-white">
+        <section className="w-full dark bg-gray-900  dark:bg-white pt-14">
             <div className="container p-4 mx-auto max-w-7xl sm:p-6 lg:p-8 flex flex-wrap">
                 <div className="mb-6 w-full shrink-0 grow-0 basis-auto px-3 lg:mb-0 lg:w-4/12">
                     <p className="mb-6 font-bold uppercase text-primary dark:text-primary-400">
