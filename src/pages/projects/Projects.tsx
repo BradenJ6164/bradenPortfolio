@@ -36,7 +36,7 @@ const ProjectsScreen = () => {
                     </svg>
 
                 )} TagColor={"text-red-500"}
-                                 Description={ (<span>RBxConnect is a propreitary interface for control Routerbox routers by <a
+                                 Description={ (<span>RBxConnect is a propreitary interface for controlling Routerbox routers by <a
                                      className="text-primary underline" href='https://techology.com' target='_blank'
                                      rel="noreferrer">Techology</a>. I created this with Vue.JS and Vuetify UI. It has many configuration pages and dashboards. It also includes fully functional IOS/Android app using Capacitor.JS as a translation, all in the same codebase.</span>)}/>
 
